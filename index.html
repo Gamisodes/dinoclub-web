@@ -5,43 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Steven & Parker</title>
   <style>
-    html, body {
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
       height: 100%;
       overflow: hidden;
     }
 
-    /* Background image setup */
+    /* Desktop background */
     body {
-      background: url("Desktop%20view.png") no-repeat center center;
-      background-size: cover; /* ensures it fills screen */
-      background-color: #ffd23f; /* fallback color similar to image bg */
+      background: url("desktop.png") no-repeat center center;
+      background-size: contain; /* keeps full image visible */
+      background-color: #ffd23f; /* fallback color */
       position: relative;
     }
 
-    /* Invisible overlay for clickable areas */
+    /* Invisible clickable overlay */
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
     }
 
-    /* Invisible clickable buttons */
+    /* Invisible buttons */
     .apple-btn, .google-btn {
       position: absolute;
-      width: 150px; /* approximate width */
-      height: 45px; /* approximate height */
+      width: 150px;   /* adjust to match button size */
+      height: 45px;   /* adjust to match button height */
       cursor: pointer;
       z-index: 10;
     }
 
-    /* Adjust these two positions to align exactly over the image buttons */
+    /* Button positions (aligned for 1366x768 image) */
     .apple-btn {
-      top: 67.5%;   /* vertical position */
-      left: 43%;    /* horizontal position */
+      top: 67.5%;
+      left: 42.5%;
     }
 
     .google-btn {
@@ -49,10 +54,11 @@
       left: 56.5%;
     }
 
+    /* Switch to mobile image */
     @media (max-width: 768px) {
       body {
         background: url("mobile.png") no-repeat center center;
-        background-size: cover;
+        background-size: contain;
       }
     }
   </style>
