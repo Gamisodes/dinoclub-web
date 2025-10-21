@@ -12,18 +12,15 @@
       overflow: hidden;
     }
 
-    /* Background image */
+    /* Background image setup */
     body {
-      background: url('Desktop view.png') no-repeat center center;
-      background-size: contain;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: url("Desktop%20view.png") no-repeat center center;
+      background-size: cover; /* ensures it fills screen */
+      background-color: #ffd23f; /* fallback color similar to image bg */
       position: relative;
     }
 
-    /* Wrapper to keep overlays positioned relative to image size */
+    /* Invisible overlay for clickable areas */
     .overlay {
       position: absolute;
       top: 0;
@@ -32,30 +29,30 @@
       height: 100%;
     }
 
-    /* Clickable button areas */
+    /* Invisible clickable buttons */
     .apple-btn, .google-btn {
       position: absolute;
-      width: 140px;   /* adjust for exact image button width */
-      height: 45px;   /* adjust for exact image button height */
+      width: 150px; /* approximate width */
+      height: 45px; /* approximate height */
       cursor: pointer;
+      z-index: 10;
     }
 
-    /* Position over App Store button */
+    /* Adjust these two positions to align exactly over the image buttons */
     .apple-btn {
-      top: 66%;       /* vertical position on image */
-      left: 42.5%;    /* horizontal position */
+      top: 67.5%;   /* vertical position */
+      left: 43%;    /* horizontal position */
     }
 
-    /* Position over Google Play button */
     .google-btn {
-      top: 66%;
-      left: 55.5%;
+      top: 67.5%;
+      left: 56.5%;
     }
 
     @media (max-width: 768px) {
       body {
-        background: url('mobile.png') no-repeat center center;
-        background-size: contain;
+        background: url("mobile.png") no-repeat center center;
+        background-size: cover;
       }
     }
   </style>
