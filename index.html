@@ -17,7 +17,6 @@
       overflow: hidden;
     }
 
-    /* Background (black base + centered image) */
     body {
       background: #000 url("desktop.png") no-repeat center center;
       background-size: contain;
@@ -31,24 +30,25 @@
       height: 100%;
     }
 
-    .apple-btn, .google-btn {
+    .apple-btn,
+    .google-btn {
       position: absolute;
-      width: 10%;   /* slightly smaller width */
-      height: 6%;   /* keep same height */
+      width: 9.7%;   /* slightly narrower (~5px less) */
+      height: 6%;    /* same height */
       cursor: pointer;
       z-index: 10;
     }
 
     /* Apple Store Button */
     .apple-btn {
-      top: calc(73% + 1%);    /* moved down ~3px */
-      left: 42.5%;            /* same horizontal start as before */
+      top: calc(73% - 0.4%);  /* ~3px higher */
+      left: 42.5%;            /* unchanged horizontal position */
     }
 
-    /* Google Play Button (same size, moved left slightly) */
+    /* Google Play Button */
     .google-btn {
-      top: calc(73% + 1%);    /* same vertical alignment */
-      left: 54%;              /* moved left from 55.5% */
+      top: calc(73% - 0.4%);  /* ~3px higher */
+      left: calc(54% - 0.4%); /* ~5px further left */
     }
 
     @media (max-width: 768px) {
