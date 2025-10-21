@@ -20,7 +20,9 @@
 
     body {
       background: url('desktop.png') no-repeat center center;
-      background-size: cover;
+      background-size: cover;          /* Fill screen */
+      background-position: center;     /* Ensure it's centered */
+      background-attachment: fixed;    /* Optional: makes it stay fixed */
     }
 
     /* Mobile Image */
@@ -28,6 +30,7 @@
       body {
         background: url('mobile.png') no-repeat center center;
         background-size: cover;
+        background-position: center;
       }
     }
   </style>
