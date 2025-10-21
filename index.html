@@ -17,10 +17,10 @@
       overflow: hidden;
     }
 
+    /* Background (black base + centered image) */
     body {
-      background: url("desktop.png") no-repeat center center;
+      background: #000 url("desktop.png") no-repeat center center;
       background-size: contain;
-      background-color: #000;
       position: relative;
     }
 
@@ -31,30 +31,30 @@
       height: 100%;
     }
 
-    /* Adjusted invisible button positions */
     .apple-btn, .google-btn {
       position: absolute;
-      cursor: pointer;
-      z-index: 10;
       width: 10.5%;   /* proportional width */
       height: 6%;     /* proportional height */
+      cursor: pointer;
+      z-index: 10;
     }
 
+    /* App Store — moved ~5px left and ~5px down */
     .apple-btn {
-      top: 73%;
-      left: 42.5%;
+      top: calc(73% + 0.7%);     /* slightly lower */
+      left: calc(42.5% - 0.4%);  /* slightly left */
     }
 
+    /* Google Play — moved ~100px left (~7.3%) and ~5px down (~0.7%) */
     .google-btn {
-      top: 73%;
-      left: 55.5%;
+      top: calc(73% + 0.7%);
+      left: calc(55.5% - 7.3%);
     }
 
     @media (max-width: 768px) {
       body {
-        background: url("mobile.png") no-repeat center center;
+        background: #000 url("mobile.png") no-repeat center center;
         background-size: contain;
-        background-color: #000;
       }
     }
   </style>
