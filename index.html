@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Steven & Parker</title>
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -18,15 +17,13 @@
       overflow: hidden;
     }
 
-    /* Desktop background */
     body {
       background: url("desktop.png") no-repeat center center;
-      background-size: contain; /* keeps full image visible */
-      background-color: #ffd23f; /* fallback color */
+      background-size: contain;
+      background-color: #000;
       position: relative;
     }
 
-    /* Invisible clickable overlay */
     .overlay {
       position: absolute;
       inset: 0;
@@ -34,31 +31,30 @@
       height: 100%;
     }
 
-    /* Invisible buttons */
+    /* Adjusted invisible button positions */
     .apple-btn, .google-btn {
       position: absolute;
-      width: 150px;   /* adjust to match button size */
-      height: 45px;   /* adjust to match button height */
       cursor: pointer;
       z-index: 10;
+      width: 10.5%;   /* proportional width */
+      height: 6%;     /* proportional height */
     }
 
-    /* Button positions (aligned for 1366x768 image) */
     .apple-btn {
-      top: 67.5%;
+      top: 73%;
       left: 42.5%;
     }
 
     .google-btn {
-      top: 67.5%;
-      left: 56.5%;
+      top: 73%;
+      left: 55.5%;
     }
 
-    /* Switch to mobile image */
     @media (max-width: 768px) {
       body {
         background: url("mobile.png") no-repeat center center;
         background-size: contain;
+        background-color: #000;
       }
     }
   </style>
