@@ -17,6 +17,7 @@
       overflow: hidden;
     }
 
+    /* ===== Desktop View ===== */
     body {
       background: #000 url("desktop.png") no-repeat center center;
       background-size: contain;
@@ -30,31 +31,45 @@
       height: 100%;
     }
 
-    .apple-btn,
-    .google-btn {
+    .apple-btn, .google-btn {
       position: absolute;
-      width: 7%;   /* slightly narrower (~5px less) */
-      height: 5%;    /* same height */
+      width: 7%;
+      height: 5%;
       cursor: pointer;
       z-index: 10;
     }
 
-    /* Apple Store Button */
+    /* Desktop: precise positions */
     .apple-btn {
-      top: 71.5% ;  /* ~3px higher */
-      left: 42%;            /* unchanged horizontal position */
+      top: 71.5%;
+      left: 42%;
     }
 
-    /* Google Play Button */
     .google-btn {
-      top: 71.5% ;  /* ~3px higher */
-      left: 51% ; /* ~5px further left */
+      top: 71.5%;
+      left: 51%;
     }
 
+    /* ===== Mobile View ===== */
     @media (max-width: 768px) {
       body {
         background: #000 url("mobile.png") no-repeat center center;
         background-size: contain;
+      }
+
+      .apple-btn, .google-btn {
+        width: 20%;
+        height: 4.5%;
+      }
+
+      .apple-btn {
+        top: 87.7%;
+        left: 27.5%;
+      }
+
+      .google-btn {
+        top: 87.7%;
+        left: 52.5%;
       }
     }
   </style>
